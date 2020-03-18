@@ -1,0 +1,189 @@
+<!-- Heya! Thanks for looking into inspect element of my website! ;) 
+	Wanna know more about website? you can text me anytime! -->
+
+{% load static %}
+<!doctype html>
+<html>
+	<head>
+		<title>Certifications</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!-- Mobile Metas -->
+	    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	    
+	    <meta name="keywords" content="">
+	    <meta name="description" content="">
+	    <meta name="author" content="Gaurav Ghati">
+	    
+	    <!-- Website Icon -->
+	    <link rel="shortcut icon" href="{% static 'images/icons/favicon.png' %}" type="image/x-icon" />
+	    
+	    <!-- linked css and js -->
+	    <link rel="stylesheet" href="{% static 'css/pwcss/googleapisfontfamily.css' %}">
+	    
+	    <!-- Responsive CSS -->
+    	<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+	    
+	    <!-- Bootstrap CSS -->
+	    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    	
+    	<!-- Site CSS -->
+	    <link rel="stylesheet" href="{% static 'style.css' %}">
+    
+	    <script>
+		  window.console = window.console || function(t) {};
+		  
+		  if (document.location.search.match(/type=embed/gi)) {
+			window.parent.postMessage("resize", "*");
+		  }
+		</script>
+		<script type="text/javascript">
+            function openTab(th)
+            {
+                window.open(th.name,'_blank');
+            }
+        </script>
+	</head>	
+
+	<body>
+
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #1f1f1f">
+		      <div class="container">
+		        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+					<h1><b>Certifications</h1>
+				</a>
+		        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+		          Menu
+		          <i class="fa fa-bars"></i>
+		        </button>
+		        <div class="collapse navbar-collapse" id="navbarResponsive">
+		          <ul class="navbar-nav text-uppercase ml-auto">
+		            <li class="nav-item">
+		              <a class="nav-link js-scroll-trigger" href="{% url 'home' %}">Home</a>
+		            </li>
+		            <li class="nav-item">
+		              <a class="nav-link js-scroll-trigger active" href="{% url 'certificate' %}">Certifications</a>
+		            </li>
+		            <li class="nav-item">
+		              <a class="nav-link js-scroll-trigger" href="{% url 'project' %}">Projects</a>
+		            </li>
+		            <li class="nav-item">
+		              <a class="nav-link js-scroll-trigger" href="{% url 'workexp' %}">Experience</a>
+		            </li>
+		          </ul>
+		        </div>
+		      </div>
+		</nav>
+
+		<div class="certifi" style="padding-top: 50px; padding-right: 15%; padding-left: 15%;">
+			<table>
+				  {% for i in  all_certificates %}
+				  <tbody>
+					    <tr>
+					      <td class="c-heading">{{ i.date }}</td>
+					    </tr>
+					    <tr>
+					      <td class="c-main">{{ i.certi }}</td>
+					      <td class="tdr"><button class="btn-certi" onClick="openTab(this)" name="{{ i.link }}">Certificate</button></td>
+					    </tr>
+					    <tr>
+					      <td class="c-des" style="font-family: Courier New,Courier; color: white;">{{ i.from }}</td>
+					    </tr>
+						<tr>
+					      <td class="c-des" style="border-bottom: 1px solid green;" colspan="2">{{ i.des }}</td>
+					    </tr>
+				  </tbody>
+				  {% endfor %}
+
+<!--				  <tbody>-->
+<!--					    <tr>-->
+<!--					      <td class="c-heading">Dec 2019</td>-->
+<!--					    </tr>-->
+<!--					    <tr>-->
+<!--					      <td class="c-main">Neural Networks and Deep Learning</td>-->
+<!--					      <td class="tdr"><button class="btn-certi" onClick="openTab(this)" name="https://www.coursera.org/account/accomplishments/certificate/7JC5MSD6XNAJ">Certificate</button></td>-->
+<!--					    </tr>-->
+<!--					    <tr>-->
+<!--					      <td class="c-des" style="font-family: Courier New,Courier; color: white;">Coursera</td>-->
+<!--					    </tr>-->
+<!--						<tr>-->
+<!--					      <td class="c-des" style="border-bottom: 1px solid green;" colspan="2">First course in a 5 course specialization on deep learning by deeplearning.ai</td>-->
+<!--					    </tr>-->
+<!--				  </tbody>-->
+
+<!--				  <tbody>-->
+<!--					    <tr>-->
+<!--					      <td class="c-heading">July 2019</td>-->
+<!--					    </tr>-->
+<!--					    <tr>-->
+<!--					      <td class="c-main">Internship Completion Certificate</td>-->
+<!--					      <td class="tdr"><button class="btn-certi" onClick="openTab(this)" href="#" name="images/certificates/InternshipCompletion.pdf">Certificate</button></td>-->
+<!--					    </tr>-->
+<!--					    <tr>-->
+<!--					      <td class="c-des" style="font-family: Courier New,Courier; color: white;">Indian Institute of Management, Ahmedabad</td>-->
+<!--					    </tr>-->
+<!--						<tr>-->
+<!--					      <td class="c-des" style="border-bottom: 1px solid green;" colspan="2">Done full time paid internship at IIMA</td>-->
+<!--					    </tr>-->
+<!--				  </tbody>-->
+
+<!--				  <tbody>-->
+<!--					    <tr>-->
+<!--					      <td class="c-heading">December 2018</td>-->
+<!--					    </tr>-->
+<!--					    <tr>-->
+<!--					      <td class="c-main">Java: Masterclass for Software Development</td>-->
+<!--					      <td class="tdr"><button class="btn-certi" onClick="openTab(this)" href="#" name="images/certificates/java-certificate.pdf">Certificate</button></td>-->
+<!--					    </tr>-->
+<!--					    <tr>-->
+<!--					      <td class="c-des" style="font-family: Courier New,Courier; color: white;">Udemy</td>-->
+<!--					    </tr>-->
+<!--						<tr>-->
+<!--					      <td class="c-des" style="border-bottom: 1px solid green;" colspan="2">Completed a online Java Course for software Development</td>-->
+<!--					    </tr>-->
+<!--				  </tbody>-->
+
+<!--				  <tbody>-->
+<!--					    <tr>-->
+<!--					      <td class="c-heading">July 2017</td>-->
+<!--					    </tr>-->
+<!--					    <tr>-->
+<!--					      <td class="c-main">Data Structures with C++</td>-->
+<!--					      <td class="tdr"><button class="btn-certi" onClick="openTab(this)" href="#" name="images/certificates/CPP_Certificate.pdf">Certificate</button></td>-->
+<!--					    </tr>-->
+<!--					    <tr>-->
+<!--					      <td class="c-des" style="font-family: Courier New,Courier; color: white;">Disha Institute</td>-->
+<!--					    </tr>-->
+<!--						<tr>-->
+<!--					      <td class="c-des" style="border-bottom: 1px solid green;" colspan="2">Completed a 3 Months Course and mastered all data structure concept with C++</td>-->
+<!--					    </tr>-->
+<!--				  </tbody>-->
+
+<!--				  <tbody>-->
+<!--					    <tr>-->
+<!--					      <td class="c-heading">May 2017</td>-->
+<!--					    </tr>-->
+<!--					    <tr>-->
+<!--					      <td class="c-main">C Programming</td>-->
+<!--					      <td class="tdr"><button class="btn-certi" onClick="openTab(this)" href="#" name="images/certificates/C_certificate.pdf">Certificate</button></td>-->
+<!--					    </tr>-->
+<!--					    <tr>-->
+<!--					      <td class="c-des" style="font-family: Courier New,Courier; color: white;">Disha Institute</td>-->
+<!--					    </tr>-->
+<!--						<tr>-->
+<!--					      <td class="c-des" style="border-bottom: 1px solid green;" colspan="2">Completed and secure 70% with specialisation in C</td>-->
+<!--					    </tr>-->
+<!--				  </tbody>-->
+				  
+			</table>
+		</div>
+
+
+		<!-- ALL JS FILES -->
+    	<script src="{% static 'js/all.js' %}"></script>
+ 		<script src="{% static 'js/headline.js' %}"></script>
+ 		<script src="{% static 'js/parallaxie.js' %}"></script>
+ 		<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+	</body>
+</html>

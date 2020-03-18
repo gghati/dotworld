@@ -1,0 +1,6 @@
+env
+restapp/migrations
+restapp/__pycache__
+myworld/__pycache__
+.idea
+db.sqlite3

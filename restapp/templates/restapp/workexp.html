@@ -1,0 +1,198 @@
+<!-- Heya! Thanks for looking into inspect element of my website! ;) 
+	Wanna know more about website? you can text me anytime! -->
+{% load static %}
+<!doctype html>
+<html>
+	<head>
+		<title>Work Experience</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!-- Mobile Metas -->
+	    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	    
+	    <meta name="keywords" content="">
+	    <meta name="description" content="">
+	    <meta name="author" content="Gaurav Ghati">
+	    
+	    <!-- Website Icon -->
+	    <link rel="shortcut icon" href="{% static 'images/icons/favicon.png' %}" type="image/x-icon" />
+	    
+	    <!-- linked css and js -->
+	    <link rel="stylesheet" href="{% static 'css/pwcss/w-style.css' %}">
+	    <link rel="stylesheet" href="{% static 'css/pwcss/googleapisfontfamily.css' %}">
+	    
+	    <!-- Responsive CSS -->
+    	<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+	    
+	    <!-- Bootstrap CSS -->
+	    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    	
+    	<!-- Site CSS -->
+	    <link rel="stylesheet" href="{% static 'style.css' %}">
+	    
+	    <script>
+		  window.console = window.console || function(t) {};
+		  
+		  if (document.location.search.match(/type=embed/gi)) {
+			window.parent.postMessage("resize", "*");
+		  }
+		</script>
+
+	</head>	
+	
+	<body translate="no">
+
+			<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+		      <div class="container">
+		        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+					<h1><b>Experience</h1>
+				</a>
+		        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+		          Menu
+		          <i class="fa fa-bars"></i>
+		        </button>
+		        <div class="collapse navbar-collapse" id="navbarResponsive">
+		          <ul class="navbar-nav text-uppercase ml-auto">
+		            <li class="nav-item">
+		              <a class="nav-link js-scroll-trigger" href="{% url 'home' %}">Home</a>
+		            </li>
+		            <li class="nav-item">
+		              <a class="nav-link js-scroll-trigger" href="{% url 'certificate' %}">Certifications</a>
+		            </li>
+		            <li class="nav-item">
+		              <a class="nav-link js-scroll-trigger" href="{% url 'project' %}">Projects</a>
+		            </li>
+		            <li class="nav-item">
+		              <a class="nav-link js-scroll-trigger active" href="{% url 'workexp' %}">Experience</a>
+		            </li>
+		          </ul>
+		        </div>
+		      </div>
+		    </nav>		
+
+
+		<div class="cont">
+			<div class="cont__inner">
+
+				<div class="el">
+				<div class="el__overflow">
+				<div class="el__inner">
+				<div class="el__bg"></div>
+				<div class="el__preview-cont">
+				<h2 class="el__heading" align="center"><b>Indian Institute of management, Ahmedabad</b></h2>
+				</div>
+				<div class="el__content">
+				<div class="el__text">Research Assistant at Indian Institute of management, Ahmedabad</div>
+					<div>
+						<font color="white" style="font-size: 16px;"> Project Name: Development of External Risk Indices.<br><br>Worked on a website and software which automates the manual process of downloading data from the sources by using APIs and display it over the website,  Created a static website(frontend using HTML, CSS, and JavaScript) and GUI of software using Python's library tinkter.
+						</font>
+
+					</div>		
+				<div class="el__close-btn"></div>
+				</div>
+				</div>
+				</div>
+				<div class="el__index">
+				<div class="el__index-back">1</div>
+				<div class="el__index-front">
+				<div class="el__index-overlay" data-index="1">1</div>
+				</div>
+				</div>
+				</div>
+
+				<div class="el">
+				<div class="el__overflow">
+				<div class="el__inner">
+				<div class="el__bg"></div>
+				<div class="el__preview-cont">
+				<h2 class="el__heading">-</h2>
+				</div>
+				<div class="el__content">
+				<div class="el__text">-</div>
+				<div class="el__close-btn"></div>
+				</div>
+				</div>
+				</div>
+				<div class="el__index">
+				<div class="el__index-back">2</div>
+				<div class="el__index-front">
+				<div class="el__index-overlay" data-index="2">2</div>
+				</div>
+				</div>
+				</div>
+				
+				<div class="el">
+				<div class="el__overflow">
+				<div class="el__inner">
+				<div class="el__bg"></div>
+				<div class="el__preview-cont">
+				<h2 class="el__heading">-</h2>
+				</div>
+				<div class="el__content">
+				<div class="el__text">-</div>
+				<div class="el__close-btn"></div>
+				</div>
+				</div>
+				</div>
+				<div class="el__index">
+				<div class="el__index-back">3</div>
+				<div class="el__index-front">
+				<div class="el__index-overlay" data-index="3">3</div>
+				</div>
+				</div>
+				</div>
+
+			</div>
+		</div>
+		<a href="index.html" target="_self" class="icon-link">
+			<img src="{% static 'images/icons/home-web.png' %}">
+		</a>
+		<a href="https://github.com/gauravghati" target="_blank" class="icon-link icon-link--github">
+			<img src="{% static 'images/icons/github-icon.png' %}">
+		</a>
+		
+		<a href="https://www.linkedin.com/in/gauravghati/" target="_blank" class="icon-link icon-link--linkedin">
+			<img src="{% static 'images/icons/linkedin.png' %}">
+		</a>
+
+		<a href="https://twitter.com/GauravGhati" target="_blank" class="icon-link icon-link--twitter">
+			<img src="{% static 'images/icons/twitter.png' %}">
+		</a>			
+	
+		<script id="rendered-js">
+      		var $cont = document.querySelector('.cont');
+			var $elsArr = [].slice.call(document.querySelectorAll('.el'));
+			var $closeBtnsArr = [].slice.call(document.querySelectorAll('.el__close-btn'));
+
+			setTimeout(function () {
+			  $cont.classList.remove('s--inactive');
+			}, 200);
+
+			$elsArr.forEach(function ($el) {
+			  $el.addEventListener('click', function () {
+				if (this.classList.contains('s--active')) return;
+				$cont.classList.add('s--el-active');
+				this.classList.add('s--active');
+			  });
+			});
+
+			$closeBtnsArr.forEach(function ($btn) {
+			  $btn.addEventListener('click', function (e) {
+				e.stopPropagation();
+				$cont.classList.remove('s--el-active');
+				document.querySelector('.el.s--active').classList.remove('s--active');
+			  });
+			});
+   		   //# sourceURL=pen.js
+    	</script>
+	
+	</body>
+
+		<!-- ALL JS FILES -->
+    	<script src="{% static 'js/all.js' %}"></script>
+ 		<script src="{% static 'js/headline.js' %}"></script>
+ 		<script src="{% static 'js/parallaxie.js' %}"></script>
+ 		<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+
+</html>

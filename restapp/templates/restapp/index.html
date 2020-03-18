@@ -1,0 +1,359 @@
+
+<!-- Heya! Thanks for looking into inspect element of my website! ;) 
+	Wanna know more about website? you can text me anytime!-->
+
+{% load static %}
+<!doctype html>
+<html>
+	<head>
+		<title>{{ name }}</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!-- Mobile Metas -->
+	    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	    
+	    <meta name="keywords" content="">
+	    <meta name="description" content="">
+	    <meta name="author" content="Gaurav Ghati">
+	    
+	    <!-- Website Icon -->
+	    <link rel="shortcut icon" href="{% static 'images/icons/favicon.png' %}" type="image/x-icon" />
+	    
+	    <!-- Bootstrap CSS -->
+	    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    	
+    	<!-- Site CSS -->
+	    <link rel="stylesheet" href="{% static 'style.css' %}">
+    	
+    	<!-- Responsive CSS -->
+    	<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    	<link rel="stylesheet" href="{% static 'css/versions.css' %}">
+    	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+    	<!-- Custom CSS -->
+<!--    	<link rel="stylesheet" href="{% static 'css/custom.css' %}">-->
+
+    	<script type="text/javascript">
+            function openTab(th)
+            {
+                window.open(th.name,'_blank');
+            }
+        </script>
+		
+<!-- 		<script>
+			// showing code after 3 second, initially by default it is hidden
+			setTimeout(function(){ $("#body").show(); }, 400);
+		</script> -->
+
+		<script>
+		  window.console = window.console || function(t) {};
+		</script>
+		
+		<script>
+		  if (document.location.search.match(/type=embed/gi)) {
+		    window.parent.postMessage("resize", "*");
+		  }
+		</script>
+	</head>	
+	
+	
+	<body style="background-color: #ffffff">
+		<!-- PRE-LOADER -->
+		<!-- <div id="preloader" class="fade-out" style="height: 100vh;">
+			<section class="wrapper dark">
+				<div class="spinner">
+					<i></i>
+					<i></i>
+					<i></i>
+					<i></i>
+					<i></i>
+					<i></i>
+					<i></i>
+				</div>
+			</section>
+		</div>			-->
+		<!-- END OF PRE-LOADER -->
+
+		<!-- MAIN BODY -->
+		<div id="body">
+
+			<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+		      <div class="container">
+		        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+					<img class="img-fluid"><b style="font-size: 35px;">Home Page</b></img>
+				</a>
+		        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+		          Menu
+		          <i class="fa fa-bars"></i>
+		        </button>
+		        <div class="collapse navbar-collapse" id="navbarResponsive">
+		          <ul class="navbar-nav text-uppercase ml-auto">
+		            <li class="nav-item">
+		              <a class="nav-link js-scroll-trigger active" href="#home">Home</a>
+		            </li>
+		            <li class="nav-item">
+		              <a class="nav-link js-scroll-trigger" href="#about">About Me</a>
+		            </li>
+		            <li class="nav-item">
+		              <a class="nav-link js-scroll-trigger" href="{% url 'certificate' %}">Certifications</a>
+		            </li>
+		            <li class="nav-item">
+		              <a class="nav-link js-scroll-trigger" href="{% url 'project' %}">Projects</a>
+		            </li>
+		            <li class="nav-item">
+		              <a class="nav-link js-scroll-trigger" href="{% url 'workexp' %}">Experience</a>
+		            </li>
+					<li class="nav-item">
+		              <a class="nav-link js-scroll-trigger" href="#contact">Contact me</a>
+		            </li>
+		          </ul>
+		        </div>
+		      </div>
+		    </nav>
+
+			<!-- HEADING OF MAIN PAGE -->
+			<div id="home" class="main-banner parallaxie" style="background: url('{% static 'images/programming.png' %}'); background-size: cover;">
+				<div class="heading">
+					<h1>hello i'm Gaurav</h1>
+					<p style="padding-left:15%; padding-right:15%;">"{{ bio }}"</p>
+					<h3 class="cd-headline clip is-full-width">
+						<span> I'm a</span>
+						<span class="cd-words-wrapper">
+							<b class="is-visible">{{ main.field1 }}</b>
+							<b>{{ main.field2 }}</b>
+							<b>{{ main.field3 }}</b>
+						</span>
+						<span> enthusiast</span>
+					</h3>
+				</div>
+			</div>
+
+			<svg id="clouds" class="hidden-xs" version="1.1" width="100%" height="100" viewBox="0 0 85 100" preserveAspectRatio="none">
+		        <path d="M-5 100 Q 0 20 5 100 Z
+		            M0 100 Q 5 0 10 100
+		            M5 100 Q 10 30 15 100
+		            M10 100 Q 15 10 20 100
+		            M15 100 Q 20 30 25 100
+		            M20 100 Q 25 -10 30 100
+		            M25 100 Q 30 10 35 100
+		            M30 100 Q 35 30 40 100
+		            M35 100 Q 40 10 45 100
+		            M40 100 Q 45 50 50 100
+		            M45 100 Q 50 20 55 100
+		            M50 100 Q 55 40 60 100
+		            M55 100 Q 60 60 65 100
+		            M60 100 Q 65 50 70 100
+		            M65 100 Q 70 20 75 100
+		            M70 100 Q 75 45 80 100
+		            M75 100 Q 80 30 85 100
+		            M80 100 Q 85 20 90 100
+		            M85 100 Q 90 50 95 100
+		            M90 100 Q 95 25 100 100
+		            M95 100 Q 100 15 105 100 Z">
+		        </path>
+		    </svg> 
+
+			<div id="about" class="section wb">
+		        <div class="container">
+		            <div class="row">
+		                <div class="col-md-6">
+		                    <div class="message-box">                        
+		                        <h2 class="heading-for-parts">ABOUT ME</h2>
+								<p><b> {{ aboutme.para1 }} <br><br> {{ aboutme.para2 }} </b></p>
+
+		                        <a href="#" class="sim-btn btn-hover-new" data-text="Download CV"><span>Download CV</span></a>
+		                    </div><!-- end messagebox -->
+		                </div><!-- end col -->
+
+		                <div class="col-md-6">
+		                    <div class="right-box-pro wow fadeIn">
+		                        <img src="{% static 'images/profile.png' %}" alt="" class="img-fluid img-rounded">
+		                    </div><!-- end media -->
+		                </div><!-- end col -->
+		            </div><!-- end row -->
+		        </div><!-- end container -->
+		    </div><!-- end section --> 
+
+    	<!-- <div id="skills" class="section lb">
+    		<div class="container">
+	            <div class="section-title text-left">
+	                <h2 class="heading-for-parts">SKILL SET</h2>
+	            </div>
+
+					            
+				<div class="chart-wrap">
+					<div  class="chart bars-horizontal brand-primary">
+						<div class="row">
+							<span class="label">Web Development</span>
+							<div class="bar-wrap">
+								<div class="bar in" style="width: 70%;"></div>
+							</div>
+						</div>
+						<div class="row">
+							<span class="label">Neural Networks</span>
+							<div class="bar-wrap">
+							<div class="bar in" style="width: 85%;"></div>
+							</div>
+						</div>
+						<div class="row">
+							<span class="label">Deep Learning</span>
+							<div class="bar-wrap">
+							<div class="bar in" style="width: 95%;"></div>
+							</div>
+						</div>
+						<div class="row">
+							<span class="label">Git</span>
+							<div class="bar-wrap">
+							<div class="bar in" style="width: 82%;"></div>
+							</div>
+						</div>
+						<div class="row">
+							<span class="label">Java</span>
+							<div class="bar-wrap">
+							<div class="bar in" style="width: 72%;"></div>
+							</div>
+						</div>
+						<div class="row">
+							<span class="label">Python</span>
+							<div class="bar-wrap">
+							<div class="bar in" style="width: 93%;"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div> -->
+
+		<div id="api" class="section lb">
+			<div class="container">
+				<h2 class="heading-for-parts">I'm available as a static API :P</h2>
+				<img src="{% static 'images/my-api.png' %}">
+			</div>
+			<button class="btn-certi2" onClick="openTab(this)" name="https://gauravghati.github.io/apis/home.json">View API</button>
+		</div>
+
+		<div class="section lb" style="text-align: center; text-shadow:1px 1px 1px rgba(0,0,0,0.3);">
+			<hr>
+			<h1>{{ fun }}</h1>
+			<hr>
+		</div>
+			
+		<div id="volunteer" class="section lb">
+    		<div class="container">
+	            <div class="section-title text-left">
+	                <h2 class="heading-for-parts">VOLUNTEER</h2>
+	            </div>
+
+	            <div class="vcontainer">
+				<h3 class="main-title">{{ volunteer.tfi.heading }}</h3>
+				<div class="vcontent">
+				<div class="vcontent-overlay"></div>
+				<img class="vcontent-image" src="{% static 'images/tfi.jpg' %}">
+				<div class="vcontent-details fadeIn-bottom">
+					<img class="vimg" src="{% static 'images/icons/teachforindia.jpg' %}">
+				<h3 class="vcontent-title">{{ volunteer.tfi.heading }}</h3>
+					<p class="vcontent-text"><b>{{ volunteer.tfi.description }}</b></p>
+				</div>
+				</a>
+				</div>
+				</div>
+
+				<div class="vcontainer">
+				<h3 class="main-title">{{ volunteer.pisb.heading }}</h3>
+				<div class="vcontent">
+				<div class="vcontent-overlay"></div>
+				<img class="vcontent-image" src="{% static 'images/clash.jpg' %}">
+				<div class="vcontent-details fadeIn-top">
+					<img class="vimg" src="{% static 'images/icons/pisb.png' %}">
+				<h3>{{ volunteer.pisb.heading }}</h3>
+					<p class="vcontent-text"><b>{{ volunteer.pisb.description }}</b></p>
+				</div>
+				</a>
+				</div>
+				</div>
+	
+			</div>	
+		</div>	
+
+		<div id="contact" class="copyrights">
+	        <div class="container">
+
+	        <div class="row">
+	          <div style="color: white;" class="col-md-12 col-sm-12 col-xs-12">
+	            <h3 style="text-align: center;">Send Me a Message</h3>
+	            <form class="form-horizontal" role="form" id="form" method="post">
+
+	              <div style="text-align: left;" class="form-group">
+	                <label for="name">Name</label>
+	                <div class="col-sm-10">
+	                  <input type="text" class="contact form-control" name="name" id="name" placeholder="Name">
+	                </div>
+	              </div>
+
+	              <div style="text-align: left; font-family:Arial;" class="form-group">
+	                <label for="email">Email</label>
+	                <div class="col-sm-10">
+	                  <input type="email" class="contact form-control" name="email" id="email" placeholder="Email">
+	                </div>
+	              </div>
+
+	              <div style="text-align: left;" class="form-group">
+	                <label for="subject" style="text-align: left;">Subject</label>
+	                <div class="col-sm-10">
+	                  <input type="text" class="contact form-control" name="subject" id="subject" placeholder="Subject">
+	                </div>
+	              </div>
+
+	              <div style="text-align: left;" class="form-group">
+	                <label for="message">Message</label>
+	                <div class="col-sm-10">
+	                  <textarea class="contact form-control" rows="3" name="message" id="message" placeholder="Message"></textarea>
+	                </div>
+	              </div>
+
+	              <div class="form-group">
+	                <div style="text-align: right;">
+	                  <input type="submit" value="Send" class="btn btn-default" name="submit">
+	                </div>
+	              </div>
+
+	            </form>
+	          </div><!--/.col-->
+	        </div><!--/.row-->
+
+
+
+	        	<div class="footer-distributed">
+	        		<div class="footer-links">
+			        	<a href="#">{{ phone }}</a>
+						<a href="{{ linkedin }}" target="_blank" >
+							<img class="icon-link-footer" src="{% static 'images/icons/linkedin.png' %}">
+						</a>
+						<a href="{{ twitter }}" target="_blank">
+							<img class="icon-link-footer" src="{% static 'images/icons/twitter.png' %}">
+						</a>
+						<a href="{{ github }}" target="_blank" >
+							<img class="icon-link-footer" src="{% static 'images/icons/github-icon.png' %}">
+						</a>
+						<a href="mailto:gauravghati225@gmail.com" target="_blank">
+							{{ mail }}
+						</a>
+	        		</div>
+	            	<div class="footer-left">
+	                   <p class="footer-name">&copy; 2019 By <a href="#about">Gaurav Ghati</a></p>
+	                </div>
+	            </div>
+	        </div><!-- end container -->
+	    </div><!-- end copyrights -->
+
+		<!-- ALL JS FILES -->
+    	<script src="{% static 'js/all.js' %}"></script>
+ 		<script src="{% static 'js/headline.js' %}"></script>
+ 		<script src="{% static 'js/parallaxie.js' %}"></script>
+ 		<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+ 		<script src="{% static 'js/custom.js' %}"></script>
+
+	</body>
+</html>
