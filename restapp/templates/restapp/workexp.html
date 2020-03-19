@@ -46,12 +46,19 @@
 			<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
 		      <div class="container">
 		        <a class="navbar-brand js-scroll-trigger" href="#page-top">
-					<h1><b>Experience</h1>
+					<img class="img-fluid"><b style="font-size: 35px;">Experience</b></img>
 				</a>
 		        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 		          Menu
 		          <i class="fa fa-bars"></i>
 		        </button>
+
+				<ul class="navbar-nav text-uppercase ml-auto">
+					<li class="nav-item">
+					  <a class="nav-link js-scroll-trigger" target="_blank" href="https://gauravghati.github.io/apis/extra.json">Api of this Page</a>
+					</li>
+				</ul>
+
 		        <div class="collapse navbar-collapse" id="navbarResponsive">
 		          <ul class="navbar-nav text-uppercase ml-auto">
 		            <li class="nav-item">
@@ -75,52 +82,57 @@
 		<div class="cont">
 			<div class="cont__inner">
 
-				<div class="el">
-				<div class="el__overflow">
-				<div class="el__inner">
-				<div class="el__bg"></div>
-				<div class="el__preview-cont">
-				<h2 class="el__heading" align="center"><b>Indian Institute of management, Ahmedabad</b></h2>
-				</div>
-				<div class="el__content">
-				<div class="el__text">Research Assistant at Indian Institute of management, Ahmedabad</div>
-					<div>
-						<font color="white" style="font-size: 16px;"> Project Name: Development of External Risk Indices.<br><br>Worked on a website and software which automates the manual process of downloading data from the sources by using APIs and display it over the website,  Created a static website(frontend using HTML, CSS, and JavaScript) and GUI of software using Python's library tinkter.
-						</font>
+				{% for exp in experience %}
+					<div class="el">
+					<div class="el__overflow">
+					<div class="el__inner">
+					<div class="el__bg"></div>
+					<div class="el__preview-cont">
+					<h2 class="el__heading" align="center"><b>{{ exp.place }}</b></h2>
+					</div>
+					<div class="el__content">
+						<div class="el__text"><b>{{ exp.position }}</b></div>
+						<div>
+							<font color="white" style="font-size: 16px;"> <b>
+								<br>Project Name: {{ exp.projectname }}
+								<br><br>Working Period: {{ exp.period }}
+								<br><br>Description: {{ exp.des }} </b>
+							</font>
 
-					</div>		
-				<div class="el__close-btn"></div>
-				</div>
-				</div>
-				</div>
-				<div class="el__index">
-				<div class="el__index-back">1</div>
-				<div class="el__index-front">
-				<div class="el__index-overlay" data-index="1">1</div>
-				</div>
-				</div>
-				</div>
+						</div>
+					<div class="el__close-btn"></div>
+					</div>
+					</div>
+					</div>
+					<div class="el__index">
+					<div class="el__index-back">{{ forloop.counter }}</div>
+					<div class="el__index-front">
+					<div class="el__index-overlay" data-index="{{ forloop.counter }}">{{ forloop.counter }}</div>
+					</div>
+					</div>
+					</div>
+				{% endfor %}
 
-				<div class="el">
-				<div class="el__overflow">
-				<div class="el__inner">
-				<div class="el__bg"></div>
-				<div class="el__preview-cont">
-				<h2 class="el__heading">-</h2>
-				</div>
-				<div class="el__content">
-				<div class="el__text">-</div>
-				<div class="el__close-btn"></div>
-				</div>
-				</div>
-				</div>
-				<div class="el__index">
-				<div class="el__index-back">2</div>
-				<div class="el__index-front">
-				<div class="el__index-overlay" data-index="2">2</div>
-				</div>
-				</div>
-				</div>
+<!--				<div class="el">-->
+<!--				<div class="el__overflow">-->
+<!--				<div class="el__inner">-->
+<!--				<div class="el__bg"></div>-->
+<!--				<div class="el__preview-cont">-->
+<!--				<h2 class="el__heading">-</h2>-->
+<!--				</div>-->
+<!--				<div class="el__content">-->
+<!--				<div class="el__text">-</div>-->
+<!--				<div class="el__close-btn"></div>-->
+<!--				</div>-->
+<!--				</div>-->
+<!--				</div>-->
+<!--				<div class="el__index">-->
+<!--				<div class="el__index-back">2</div>-->
+<!--				<div class="el__index-front">-->
+<!--				<div class="el__index-overlay" data-index="2">2</div>-->
+<!--				</div>-->
+<!--				</div>-->
+<!--				</div>-->
 				
 				<div class="el">
 				<div class="el__overflow">

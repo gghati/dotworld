@@ -53,6 +53,13 @@
 		          Menu
 		          <i class="fa fa-bars"></i>
 		        </button>
+
+				<ul class="navbar-nav text-uppercase ml-auto">
+		          	<li class="nav-item">
+		              <a class="nav-link js-scroll-trigger" target="_blank" href="https://gauravghati.github.io/apis/extra.json">Api of this page</a>
+		            </li>
+		        </ul>
+
 		        <div class="collapse navbar-collapse" id="navbarResponsive">
 		          <ul class="navbar-nav text-uppercase ml-auto">
 		            <li class="nav-item">
@@ -76,108 +83,109 @@
 
 			<div class="cont__inner">
 
-				<div class="el">
-				<div class="el__overflow">
-				<div class="el__inner">
-				<div class="el__bg"></div>
-				<div class="el__preview-cont">
-				<h2 class="el__heading" style="color: black;">To Do List</h2>
-				</div>
-				<div class="el__content">
-				<div class="el__text">To Do List | JavaFX, FXML, MySQL</div>
-					<p style="font-size: 16px;">
-						<font color="white">- ToDoList is a desktop Software with a GUI, used to make notes and keep a track of deadlines of various work lists.
-						<br>- This application is developed in JavaFX.
-						<br>- The user can add, delete and check tasks for the day
-						</font>
-					</p>
-					<div class="el__github-btn">
-						<a href="https://github.com/gauravghati/ToDoList" target="_blank">
-							<button class="button"><span>View Project</span></button>
-						</a>
+				{% for pro in  projects %}
+					<div class="el">
+					<div class="el__overflow">
+					<div class="el__inner">
+					<div class="el__bg"></div>
+					<div class="el__preview-cont">
+					<h2 class="el__heading" style="color: black;">{{ pro.heading }}</h2>
 					</div>
-					
-				<div class="el__close-btn"></div>
-				</div>
-				</div>
-				</div>
-				<div class="el__index">
-				<div class="el__index-back">1</div>
-				<div class="el__index-front">
-				<div class="el__index-overlay" data-index="1">1</div>
-				</div>
-				</div>
-				</div>
-
-
-				<div class="el">
-				<div class="el__overflow">
-				<div class="el__inner">
-				<div class="el__bg"></div>
-				<div class="el__preview-cont">
-				<h2 class="el__heading" style="color: white;">Clash & RC</h2>
-				</div>
-				<div class="el__content">
-				<div class="el__text">Clash & RC | Django</div>
-					<div>
+					<div class="el__content">
+					<div class="el__text">{{ pro.name }}</div>
 						<p style="font-size: 16px;">
-							<font color="white">Clash and Reverse Coding(RC) is one of the most famous coding contest played all over Pune by more than 2000 teams. Organized by PICT IEEE Student Branch in annual Techfest "Credenz '19".
-
-							<br>My Role included:
-
-							<br>- Working on Backend part of the website, by Django's framework.
-							<br>- Making complete flow of the Game (creating urls and connecting pages)
-							<br>- Integrate frontend pages with backend
-							<br>- Using Sandboxing to run C/CPP code in backend.
+							<font color="white">
+							Working Period: {{ pro.time }}
+							{% for i in pro.des %}
+								<br>{{ i }}
+							{% endfor %}
 							</font>
 						</p>
-					</div>
-					<div class="el__github-btn">
-						<a href="https://github.com/clash-rc-round-2/Clash-Round-2" target="_blank">
-							<button class="button"><span>View Project</span></button>
-						</a>
-					</div>
-				<div class="el__close-btn"></div>
-				</div>
-				</div>
-				</div>
-				<div class="el__index">
-				<div class="el__index-back">2</div>
-				<div class="el__index-front">
-				<div class="el__index-overlay" data-index="2">2</div>
-				</div>
-				</div>
-				</div>
+						<div class="el__github-btn">
+							<a href="{{ pro.link }}" target="_blank">
+								<button class="button"><span>View Project</span></button>
+							</a>
+						</div>
 
-
-				<div class="el">
-				<div class="el__overflow">
-				<div class="el__inner">
-				<div class="el__bg"></div>
-				<div class="el__preview-cont">
-				<h2 class="el__heading" style="text-align: center; color: white;">National Computing Contest</h2>
-				</div>
-				<div class="el__content">
-					<div class="el__text">NCC | REST APIs</div>
-					<p style="font-size: 16px;">
-						<font color="white"></font>
-					</p>
-					<div class="el__github-btn">
-						<a href="https://github.com/CTD-NCC" target="_blank">
-							<button class="button"><span>View Project</span></button>	
-						</a>	
-					</div>				
 					<div class="el__close-btn"></div>
-				</div>
-				</div>
-				</div>
-				<div class="el__index">
-				<div class="el__index-back">3</div>
-				<div class="el__index-front">
-				<div class="el__index-overlay" data-index="3">3</div>
-				</div>
-				</div>
-				</div>
+					</div>
+					</div>
+					</div>
+					<div class="el__index">
+					<div class="el__index-back">{{ forloop.counter }}</div>
+					<div class="el__index-front">
+					<div class="el__index-overlay" data-index="{{ forloop.counter }}">{{ forloop.counter }}</div>
+					</div>
+					</div>
+					</div>
+				{% endfor %}
+
+<!--				<div class="el">-->
+<!--				<div class="el__overflow">-->
+<!--				<div class="el__inner">-->
+<!--				<div class="el__bg"></div>-->
+<!--				<div class="el__preview-cont">-->
+<!--				<h2 class="el__heading" style="color: white;">{{ projects.clash.heading }}</h2>-->
+<!--				</div>-->
+<!--				<div class="el__content">-->
+<!--				<div class="el__text">{{ projects.clash.name }}</div>-->
+<!--					<div>-->
+<!--						<p style="font-size: 16px;">-->
+<!--							<font color="white">-->
+
+<!--							{% for i in projects.clash.des %}-->
+<!--								<br>{{ i }}-->
+<!--							{% endfor %}-->
+
+<!--							</font>-->
+<!--						</p>-->
+<!--					</div>-->
+<!--					<div class="el__github-btn">-->
+<!--						<a href="{{ projects.clash.link }}" target="_blank">-->
+<!--							<button class="button"><span>View Project</span></button>-->
+<!--						</a>-->
+<!--					</div>-->
+<!--				<div class="el__close-btn"></div>-->
+<!--				</div>-->
+<!--				</div>-->
+<!--				</div>-->
+<!--				<div class="el__index">-->
+<!--				<div class="el__index-back">2</div>-->
+<!--				<div class="el__index-front">-->
+<!--				<div class="el__index-overlay" data-index="2">2</div>-->
+<!--				</div>-->
+<!--				</div>-->
+<!--				</div>-->
+
+
+<!--				<div class="el">-->
+<!--				<div class="el__overflow">-->
+<!--				<div class="el__inner">-->
+<!--				<div class="el__bg"></div>-->
+<!--				<div class="el__preview-cont">-->
+<!--				<h2 class="el__heading" style="text-align: center; color: white;">National Computing Contest</h2>-->
+<!--				</div>-->
+<!--				<div class="el__content">-->
+<!--					<div class="el__text">NCC | REST APIs</div>-->
+<!--					<p style="font-size: 16px;">-->
+<!--						<font color="white"></font>-->
+<!--					</p>-->
+<!--					<div class="el__github-btn">-->
+<!--						<a href="https://github.com/CTD-NCC" target="_blank">-->
+<!--							<button class="button"><span>View Project</span></button>	-->
+<!--						</a>	-->
+<!--					</div>				-->
+<!--					<div class="el__close-btn"></div>-->
+<!--				</div>-->
+<!--				</div>-->
+<!--				</div>-->
+<!--				<div class="el__index">-->
+<!--				<div class="el__index-back">3</div>-->
+<!--				<div class="el__index-front">-->
+<!--				<div class="el__index-overlay" data-index="3">3</div>-->
+<!--				</div>-->
+<!--				</div>-->
+<!--				</div>-->
 
 
 				<div class="el">
