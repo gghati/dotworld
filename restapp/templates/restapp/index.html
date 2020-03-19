@@ -88,6 +88,13 @@
 		          Menu
 		          <i class="fa fa-bars"></i>
 		        </button>
+
+				<ul class="navbar-nav text-uppercase ml-auto">
+		          	<li class="nav-item">
+		              <a class="nav-link js-scroll-trigger" target="_blank" href="https://gauravghati.github.io/apis/home.json">Api of this page</a>
+		            </li>
+		        </ul>
+
 		        <div class="collapse navbar-collapse" id="navbarResponsive">
 		          <ul class="navbar-nav text-uppercase ml-auto">
 		            <li class="nav-item">
@@ -127,6 +134,7 @@
 						</span>
 						<span> enthusiast</span>
 					</h3>
+					<button class="btn-certi2" onClick="openTab(this)" name="https://github.com/gauravghati/dotworld/">View Backend Code</button>
 				</div>
 			</div>
 
@@ -228,15 +236,23 @@
 
 		<div id="api" class="section lb">
 			<div class="container">
-				<h2 class="heading-for-parts">I'm available as a static API :P</h2>
-				<img src="{% static 'images/my-api.png' %}">
+				<h2 class="heading-for-parts">About this Website :P</h2>
+
+				<img src="{% static 'images/nginx-gunicorn-flow.png' %}">
+				<img style="width: 50px; height: 50px;" src="{% static 'images/plus.png' %}">
+				<img src="{% static 'images/rest_framework.png' %}">
+				<img style="width: 50px; height: 50px;" src="{% static 'images/plus.png' %}">
+				<img style="width: 350px; height: 250px;"src="{% static 'images/gcloud.png' %}">
+
+				<h6 style="padding-top: 30px" class="heading-for-parts">All three APIs of the Website: </h6>
+				<button class="btn-certi2" onClick="openTab(this)" name="https://gauravghati.github.io/apis/home.json">HOME PAGE</button>
+				<button class="btn-certi2" onClick="openTab(this)" name="https://gauravghati.github.io/apis/certificates.json">CERTIFICATE PAGE</button>
+				<button class="btn-certi2" onClick="openTab(this)" name="https://gauravghati.github.io/apis/extra.json">OTHER PAGES DATA</button>
 			</div>
-			<button class="btn-certi2" onClick="openTab(this)" name="https://gauravghati.github.io/apis/home.json">View API</button>
 		</div>
 
 		<div class="section lb" style="text-align: center; text-shadow:1px 1px 1px rgba(0,0,0,0.3);">
-			<hr>
-			<h1>{{ fun }}</h1>
+			<h4>{{ fun }}</h4>
 			<hr>
 		</div>
 			
