@@ -25,7 +25,7 @@ SECRET_KEY = '-1f-@p2-@a6d8eo-0ny%3%++^v(!82b^c#$oo0ulzw$a_mjo_$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -83,6 +83,8 @@ CORS_ALLOW_HEADERS  = [
     'x-csrftoken',
     'x-requested-with'
 ]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 TEMPLATES = [
     {
