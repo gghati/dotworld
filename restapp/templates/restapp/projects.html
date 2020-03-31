@@ -1,5 +1,6 @@
 <!-- Heya! Thanks for looking into inspect element of my website! ;) 
 	Wanna know more about website? you can text me anytime! -->
+
 {% load static %}
 <!doctype html>
 <html>
@@ -7,21 +8,20 @@
 		<title>Projects</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		
+
 		<!-- Mobile Metas -->
 	    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	    
+
 	    <meta name="keywords" content="">
 	    <meta name="description" content="">
 	    <meta name="author" content="Gaurav Ghati">
-	    
+
 	    <!-- Website Icon -->
 	    <link rel="shortcut icon" href="{% static 'images/icons/favicon.png' %}" type="image/x-icon" />
-	    
+
 	    <!-- linked css and js -->
-	    <link rel="stylesheet" href="{% static 'css/pwcss/p-style.css' %}">
 	    <link rel="stylesheet" href="{% static 'css/pwcss/googleapisfontfamily.css' %}">
-	    
+
 	    <!-- Responsive CSS -->
     	<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
 
@@ -30,21 +30,25 @@
 
     	<!-- Site CSS -->
 	    <link rel="stylesheet" href="{% static 'style.css' %}">
-    
+
 	    <script>
 		  window.console = window.console || function(t) {};
-		  
+
 		  if (document.location.search.match(/type=embed/gi)) {
 			window.parent.postMessage("resize", "*");
 		  }
 		</script>
-	</head>	
-	
+		<script type="text/javascript">
+            function openTab(th)
+            {
+                window.open(th.name,'_blank');
+            }
+        </script>
+	</head>
 
+	<body>
 
-	<body translate="no">
-
-			<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #1f1f1f">
 		      <div class="container">
 		        <a class="navbar-brand js-scroll-trigger" href="#page-top">
 					<img class="img-fluid"><b style="font-size: 35px;">Projects</b></img>
@@ -77,211 +81,39 @@
 		          </ul>
 		        </div>
 		      </div>
-		    </nav>		
+		</nav>
 
-		<div class="cont">
-
-			<div class="cont__inner">
-
-				{% for pro in  projects %}
-					<div class="el">
-					<div class="el__overflow">
-					<div class="el__inner">
-					<div class="el__bg"></div>
-					<div class="el__preview-cont">
-					<h2 class="el__heading" style="color: black;">{{ pro.heading }}</h2>
-					</div>
-					<div class="el__content">
-					<div class="el__text">{{ pro.name }}</div>
-						<p style="font-size: 16px;">
-							<font color="white">
-							Working Period: {{ pro.time }}
-							{% for i in pro.des %}
-								<br>{{ i }}
-							{% endfor %}
-							</font>
-						</p>
-						<div class="el__github-btn">
-							<a href="{{ pro.link }}" target="_blank">
-								<button class="button"><span>View Project</span></button>
-							</a>
-						</div>
-
-					<div class="el__close-btn"></div>
-					</div>
-					</div>
-					</div>
-					<div class="el__index">
-					<div class="el__index-back">{{ forloop.counter }}</div>
-					<div class="el__index-front">
-					<div class="el__index-overlay" data-index="{{ forloop.counter }}">{{ forloop.counter }}</div>
-					</div>
-					</div>
-					</div>
-				{% endfor %}
-
-<!--				<div class="el">-->
-<!--				<div class="el__overflow">-->
-<!--				<div class="el__inner">-->
-<!--				<div class="el__bg"></div>-->
-<!--				<div class="el__preview-cont">-->
-<!--				<h2 class="el__heading" style="color: white;">{{ projects.clash.heading }}</h2>-->
-<!--				</div>-->
-<!--				<div class="el__content">-->
-<!--				<div class="el__text">{{ projects.clash.name }}</div>-->
-<!--					<div>-->
-<!--						<p style="font-size: 16px;">-->
-<!--							<font color="white">-->
-
-<!--							{% for i in projects.clash.des %}-->
-<!--								<br>{{ i }}-->
-<!--							{% endfor %}-->
-
-<!--							</font>-->
-<!--						</p>-->
-<!--					</div>-->
-<!--					<div class="el__github-btn">-->
-<!--						<a href="{{ projects.clash.link }}" target="_blank">-->
-<!--							<button class="button"><span>View Project</span></button>-->
-<!--						</a>-->
-<!--					</div>-->
-<!--				<div class="el__close-btn"></div>-->
-<!--				</div>-->
-<!--				</div>-->
-<!--				</div>-->
-<!--				<div class="el__index">-->
-<!--				<div class="el__index-back">2</div>-->
-<!--				<div class="el__index-front">-->
-<!--				<div class="el__index-overlay" data-index="2">2</div>-->
-<!--				</div>-->
-<!--				</div>-->
-<!--				</div>-->
-
-
-<!--				<div class="el">-->
-<!--				<div class="el__overflow">-->
-<!--				<div class="el__inner">-->
-<!--				<div class="el__bg"></div>-->
-<!--				<div class="el__preview-cont">-->
-<!--				<h2 class="el__heading" style="text-align: center; color: white;">National Computing Contest</h2>-->
-<!--				</div>-->
-<!--				<div class="el__content">-->
-<!--					<div class="el__text">NCC | REST APIs</div>-->
-<!--					<p style="font-size: 16px;">-->
-<!--						<font color="white"></font>-->
-<!--					</p>-->
-<!--					<div class="el__github-btn">-->
-<!--						<a href="https://github.com/CTD-NCC" target="_blank">-->
-<!--							<button class="button"><span>View Project</span></button>	-->
-<!--						</a>	-->
-<!--					</div>				-->
-<!--					<div class="el__close-btn"></div>-->
-<!--				</div>-->
-<!--				</div>-->
-<!--				</div>-->
-<!--				<div class="el__index">-->
-<!--				<div class="el__index-back">3</div>-->
-<!--				<div class="el__index-front">-->
-<!--				<div class="el__index-overlay" data-index="3">3</div>-->
-<!--				</div>-->
-<!--				</div>-->
-<!--				</div>-->
-
-
-<!--				<div class="el">-->
-<!--				<div class="el__overflow">-->
-<!--				<div class="el__inner">-->
-<!--				<div class="el__bg"></div>-->
-<!--				<div class="el__preview-cont">-->
-<!--				<h2 class="el__heading">-</h2>-->
-<!--				</div>-->
-<!--				<div class="el__content">-->
-<!--				<div class="el__text">-</div>-->
-<!--				<div class="el__close-btn"></div>-->
-<!--				</div>-->
-<!--				</div>-->
-<!--				</div>-->
-<!--				<div class="el__index">-->
-<!--				<div class="el__index-back">4</div>-->
-<!--				<div class="el__index-front">-->
-<!--				<div class="el__index-overlay" data-index="4">4</div>-->
-<!--				</div>-->
-<!--				</div>-->
-<!--				</div>-->
-
-
-<!--				<div class="el">-->
-<!--				<div class="el__overflow">-->
-<!--				<div class="el__inner">-->
-<!--				<div class="el__bg"></div>-->
-<!--				<div class="el__preview-cont">-->
-<!--				<h2 class="el__heading">-</h2>-->
-<!--				</div>-->
-<!--				<div class="el__content">-->
-<!--				<div class="el__text">-</div>-->
-<!--				<div class="el__close-btn"></div>-->
-<!--				</div>-->
-<!--				</div>-->
-<!--				</div>-->
-<!--				<div class="el__index">-->
-<!--				<div class="el__index-back">5</div>-->
-<!--				<div class="el__index-front">-->
-<!--				<div class="el__index-overlay" data-index="5">5</div>-->
-<!--				</div>-->
-<!--				</div>-->
-<!--				</div>-->
-
-			</div>
-
+		<div class="certifi" style="padding-top: 50px; padding-right: 15%; padding-left: 15%;">
+			<table>
+				  {% for i in projects %}
+				  <tbody>
+					    <tr>
+					      <td class="c-heading">{{ i.time }}</td>
+					    </tr>
+					    <tr>
+					      <td class="c-main">{{ i.heading }}</td>
+					      <td class="tdr"><button class="btn-certi" onClick="openTab(this)" name="{{ i.link }}">View Projects</button></td>
+					    </tr>
+					    <tr>
+					      <td class="c-des" style="font-family: Courier New,Courier; color: white;">{{ i.tech }}</td>
+					    </tr>
+						<tr>
+					      <td class="c-des" style="border-bottom: 1px solid green;" colspan="2">
+							  {% for j in  i.des %}
+							  		{{ j }}<br>
+							  {% endfor %}
+						  </td>
+					    </tr>
+				  </tbody>
+				  {% endfor %}
+			</table>
 		</div>
-		<a href="index.html" target="_self" class="icon-link">
-			<img src="{% static 'images/icons/home-web.png' %}">
-		</a>
-		<a href="https://github.com/gauravghati" target="_blank" class="icon-link icon-link--github">
-			<img src="{% static 'images/icons/github-icon.png' %}">
-		</a>
 
-		<a href="https://www.linkedin.com/in/gauravghati/" target="_blank" class="icon-link icon-link--linkedin">
-			<img src="{% static 'images/icons/linkedin.png' %}">
-		</a>
 
-		<a href="https://twitter.com/GauravGhati" target="_blank" class="icon-link icon-link--twitter">
-			<img src="{% static 'images/icons/twitter.png' %}">
-		</a>
-
-		<script id="rendered-js">
-      		var $cont = document.querySelector('.cont');
-			var $elsArr = [].slice.call(document.querySelectorAll('.el'));
-			var $closeBtnsArr = [].slice.call(document.querySelectorAll('.el__close-btn'));
-
-			setTimeout(function () {
-			  $cont.classList.remove('s--inactive');
-			}, 200);
-
-			$elsArr.forEach(function ($el) {
-			  $el.addEventListener('click', function () {
-				if (this.classList.contains('s--active')) return;
-				$cont.classList.add('s--el-active');
-				this.classList.add('s--active');
-			  });
-			});
-
-			$closeBtnsArr.forEach(function ($btn) {
-			  $btn.addEventListener('click', function (e) {
-				e.stopPropagation();
-				$cont.classList.remove('s--el-active');
-				document.querySelector('.el.s--active').classList.remove('s--active');
-			  });
-			});
-   		   //# sourceURL=pen.js
-    	</script>
-		
 		<!-- ALL JS FILES -->
     	<script src="{% static 'js/all.js' %}"></script>
  		<script src="{% static 'js/headline.js' %}"></script>
  		<script src="{% static 'js/parallaxie.js' %}"></script>
  		<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
-
 	</body>
-
 </html>
