@@ -101,7 +101,7 @@
 		              <a class="nav-link js-scroll-trigger active" href="#home">Home</a>
 		            </li>
 		            <li class="nav-item">
-		              <a class="nav-link js-scroll-trigger" href="#about">About Me</a>
+		              <a class="nav-link js-scroll-trigger" href="#blogs">Blogs</a>
 		            </li>
 		            <li class="nav-item">
 		              <a class="nav-link js-scroll-trigger" href="{% url 'certificate' %}">Certifications</a>
@@ -182,7 +182,31 @@
 		                </div><!-- end col -->
 		            </div><!-- end row -->
 		        </div><!-- end container -->
-		    </div><!-- end section --> 
+		    </div><!-- end section -->
+
+			<div id="blogs" class="section wb" style="padding-bottom: 40px; padding-top: 20px;">
+		    	<center><h1 style="padding-bottom: 20px; font-size:45px;" class="heading-for-parts">BLOGS</h1></center>
+
+				{% for i in blogs %}
+				<div style="padding-bottom: 10px;" class="container">
+		            <div class="row">
+		                <div class="col-md-6">
+		                    <div class="message-box">
+		                        <h3 class="heading-for-parts">{{ i.name }}</h3>
+		                        <p>{{ i.des }}</p>
+
+		                        <a href="{{ i.link }}" target="_blank" class="sim-btn btn-hover-new" data-text="View Blog"><span>View Blog</span></a>
+		                    </div><!-- end messagebox -->
+		                </div><!-- end col -->
+
+		                <div class="col-md-6">
+		                    <center><img style="width:385px; height:250px;" src="{% static 'images/publii-github-pages.jpg' %}" alt="" ></center>
+		                </div><!-- end col -->
+		            </div><!-- end row -->
+		        </div><!-- end container -->
+				{% endfor %}
+
+		    </div><!-- end section -->
 
     	<!-- <div id="skills" class="section lb">
     		<div class="container">
@@ -245,7 +269,7 @@
 				<img style="width: 350px; height: 250px;"src="{% static 'images/gcloud.png' %}"><br>
 
 <!--				<h6 style="padding-top: 30px" class="heading-for-parts">All three APIs of the Website: </h6>-->
-				<button class="btn-certi2" onClick="openTab(this)" name="https://gauravghati.github.io/">More Info</button>
+				<button class="btn-certi2" onClick="openTab(this)" name="https://medium.com/@gauravghati/using-github-pages-for-creating-global-api-76b296c4b3b5">More Info</button>
 <!--				<button class="btn-certi2" onClick="openTab(this)" name="https://gauravghati.github.io/apis/certificates.json">CERTIFICATE PAGE</button>-->
 <!--				<button class="btn-certi2" onClick="openTab(this)" name="https://gauravghati.github.io/apis/extra.json">OTHER PAGES DATA</button>-->
 			</div>
