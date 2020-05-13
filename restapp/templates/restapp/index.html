@@ -171,7 +171,7 @@
 		                        <h2 class="heading-for-parts">ABOUT ME</h2>
 								<p><b> {{ aboutme.para1 }} <br><br> {{ aboutme.para2 }} </b></p>
 
-		                        <a  href="gauravghati.github.io/certificates/resume.pdf" target="_blank" class="sim-btn btn-hover-new" data-text="Download CV"><span>Open CV</span></a>
+		                        <a  href="https://gauravghati.github.io/certificates/resume.pdf" target="_blank" class="sim-btn btn-hover-new" data-text="Open CV"><span>Open CV</span></a>
 		                    </div><!-- end messagebox -->
 		                </div><!-- end col -->
 
@@ -294,7 +294,7 @@
 				<div class="vcontent-details fadeIn-bottom">
 					<img class="vimg" src="{% static 'images/icons/teachforindia.jpg' %}">
 				<h3 class="vcontent-title">{{ volunteer.tfi.heading }}</h3>
-					<p class="vcontent-text">{{ volunteer.tfi.time }}</p>
+					<p class="vcontent-text"><b>{{ volunteer.tfi.time }}</b></p>
 					<p class="vcontent-text"><b>{{ volunteer.tfi.description }}</b></p>
 				</div>
 				</a>
@@ -309,7 +309,7 @@
 				<div class="vcontent-details fadeIn-top">
 					<img class="vimg" src="{% static 'images/icons/pisb.png' %}">
 				<h3>{{ volunteer.pisb.heading }}</h3>
-					<p class="vcontent-text">{{ volunteer.pisb.time }}</p>
+					<p class="vcontent-text"><b>{{ volunteer.pisb.time }}</b></p>
 					<p class="vcontent-text"><b>{{ volunteer.pisb.description }}</b></p>
 				</div>
 				</a>
