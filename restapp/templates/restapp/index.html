@@ -25,7 +25,7 @@
     	
     	<!-- Site CSS -->
 	    <link rel="stylesheet" href="{% static 'style.css' %}">
-    	
+
     	<!-- Responsive CSS -->
     	<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
     	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
@@ -171,11 +171,11 @@
 		                        <h2 class="heading-for-parts">ABOUT ME</h2>
 								<p><b> {{ aboutme.para1 }} <br><br> {{ aboutme.para2 }} </b></p>
 
-		                        <a href="#" class="sim-btn btn-hover-new" data-text="Download CV"><span>Download CV</span></a>
+		                        <a  href="gauravghati.github.io/certificates/resume.pdf" target="_blank" class="sim-btn btn-hover-new" data-text="Download CV"><span>Open CV</span></a>
 		                    </div><!-- end messagebox -->
 		                </div><!-- end col -->
 
-		                <div class="col-md-6">
+		                <div class="col-md-6" style="padding-top:50px;">
 		                    <div class="right-box-pro wow fadeIn">
 		                        <img src="{% static 'images/profile.png' %}" alt="" class="img-fluid img-rounded">
 		                    </div><!-- end media -->
@@ -294,6 +294,7 @@
 				<div class="vcontent-details fadeIn-bottom">
 					<img class="vimg" src="{% static 'images/icons/teachforindia.jpg' %}">
 				<h3 class="vcontent-title">{{ volunteer.tfi.heading }}</h3>
+					<p class="vcontent-text">{{ volunteer.tfi.time }}</p>
 					<p class="vcontent-text"><b>{{ volunteer.tfi.description }}</b></p>
 				</div>
 				</a>
@@ -308,12 +309,12 @@
 				<div class="vcontent-details fadeIn-top">
 					<img class="vimg" src="{% static 'images/icons/pisb.png' %}">
 				<h3>{{ volunteer.pisb.heading }}</h3>
+					<p class="vcontent-text">{{ volunteer.pisb.time }}</p>
 					<p class="vcontent-text"><b>{{ volunteer.pisb.description }}</b></p>
 				</div>
 				</a>
 				</div>
 				</div>
-	
 			</div>	
 		</div>	
 
