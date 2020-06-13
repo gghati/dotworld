@@ -121,7 +121,7 @@
 		    </nav>
 
 			<!-- HEADING OF MAIN PAGE -->
-			<div id="home" class="main-banner parallaxie" style="background: url('{% static 'images/programming.png' %}'); background-size: cover;">
+			<div id="home" class="main-banner parallaxie" style="background: url('{% static 'images/programming.jpg' %}'); background-size: cover;">
 				<div class="heading">
 					<h1>hello i'm Gaurav</h1>
 					<p style="padding-left:15%; padding-right:15%;">"{{ bio }}"</p>
@@ -171,7 +171,8 @@
 		                        <h2 class="heading-for-parts">ABOUT ME</h2>
 								<p><b> {{ aboutme.para1 }} <br><br> {{ aboutme.para2 }} </b></p>
 
-		                        <a  href="https://gauravghati.github.io/certificates/resume.pdf" target="_blank" class="sim-btn btn-hover-new" data-text="Open CV"><span>Open CV</span></a>
+								<button class="btn-certi2" onClick="openTab(this)" name="https://gauravghati.github.io/certificates/resume.pdf">View CV</button>
+
 		                    </div><!-- end messagebox -->
 		                </div><!-- end col -->
 
@@ -185,7 +186,7 @@
 		    </div><!-- end section -->
 
 			<div id="blogs" class="section wb" style="padding-bottom: 40px; padding-top: 20px;">
-		    	<center><h1 style="padding-bottom: 20px; font-size:45px;" class="heading-for-parts">BLOGS</h1></center>
+		    	<center><h1 style="padding-bottom: 20px; font-size:45px;" class="heading-for-parts">TECH ARTICLES</h1></center>
 
 				{% for i in blogs %}
 				<div style="padding-bottom: 10px;" class="container">
@@ -195,12 +196,13 @@
 		                        <h3 class="heading-for-parts">{{ i.name }}</h3>
 		                        <p>{{ i.des }}</p>
 
-		                        <a href="{{ i.link }}" target="_blank" class="sim-btn btn-hover-new" data-text="View Blog"><span>View Blog</span></a>
+		                        <button class="btn-certi2" onClick="openTab(this)" name="{{ i.link }}">View Article</button>
+
 		                    </div><!-- end messagebox -->
 		                </div><!-- end col -->
 
 		                <div class="col-md-6">
-		                    <center><img style="width:385px; height:250px;" src="{{ i.image }}" alt="" ></center>
+		                    <center><img style="width:385px; height:250px;" src="{% static 'images/blogs/' %}blog{{ forloop.revcounter }}.jpg" alt="" ></center>
 		                </div><!-- end col -->
 		            </div><!-- end row -->
 		        </div><!-- end container -->
@@ -261,10 +263,10 @@
 		<div id="api" class="section lb">
 			<div class="container">
 				<h2 class="heading-for-parts">About this Website :P</h2>
-
-				<img src="{% static 'images/nginx-gunicorn-flow.png' %}">
+                   
+                <img src="{% static 'images/nginx-gunicorn-flow.png' %}" class="img-fluid">
 				<img style="width: 50px; height: 50px;" src="{% static 'images/plus.png' %}">
-				<img src="{% static 'images/rest_framework.png' %}">
+				<img src="{% static 'images/rest_framework.png' %}" class="img-fluid">
 				<img style="width: 50px; height: 50px;" src="{% static 'images/plus.png' %}">
 				<img style="width: 350px; height: 250px;"src="{% static 'images/gcloud.png' %}"><br>
 

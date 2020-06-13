@@ -87,13 +87,14 @@
 			<table>
 				  {% for i in projects %}
 				  <tbody>
-					    <tr>
+				  		<tr>
 					      <td class="c-heading">{{ i.time }}</td>
 					    </tr>
 					    <tr>
 					      <td class="c-main">{{ i.heading }}</td>
-					      <td class="tdr"><button class="btn-certi" onClick="openTab(this)" name="{{ i.link }}">View Projects</button></td>
+					      <td class="tdr"><button class="btn-certi" onClick="openTab(this)" name="{{ i.link }}">View</button></td>
 					    </tr>
+
 					    <tr>
 					      <td class="c-des" style="font-family: Courier New,Courier; color: white;">{{ i.tech }}</td>
 					    </tr>
