@@ -1,0 +1,114 @@
+<!-- Heya! Thanks for looking into inspect element of my website! ;) 
+	Wanna know more about website? you can text me anytime! -->
+
+    {% load static %}
+    <!doctype html>
+    <html>
+        <head>
+            <title>Blogs</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            
+            <!-- Mobile Metas -->
+            <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+            
+            <meta name="keywords" content="">
+            <meta name="description" content="">
+            <meta name="author" content="Gaurav Ghati">
+            
+            <!-- Website Icon -->
+            <link rel="shortcut icon" href="{% static 'favicon.png' %}" type="image/x-icon" />
+            
+            <!-- linked css and js -->
+            <link rel="stylesheet" href="{% static 'css/googleapisfontfamily.css' %}">
+            
+            <!-- Responsive CSS -->
+            <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+            
+            <!-- Bootstrap CSS -->
+            <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+            
+            <!-- Site CSS -->
+            <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        
+            <script>
+              window.console = window.console || function(t) {};
+              
+              if (document.location.search.match(/type=embed/gi)) {
+                window.parent.postMessage("resize", "*");
+              }
+            </script>
+            <script type="text/javascript">
+                function openTab(th)
+                {
+                    window.open(th.name,'_blank');
+                }
+            </script>
+        </head>	
+    
+        <body>
+    
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #1f1f1f">
+                  <div class="container">
+                    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                        <img class="img-fluid"><b style="font-size: 35px;">Blogs</b></img>
+                    </a>
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                      Menu
+                      <i class="fa fa-bars"></i>
+                    </button>
+    
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                          <li class="nav-item">
+                          <a class="nav-link js-scroll-trigger" target="_blank" href="https://gauravghati.github.io/apis/blogs.json">Api of this page</a>
+                        </li>
+                    </ul>
+    
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                      <ul class="navbar-nav text-uppercase ml-auto">
+                        <li class="nav-item">
+                          <a class="nav-link js-scroll-trigger" href="{% url 'simple' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link js-scroll-trigger" href="{% url 'certificate' %}">Certifications</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link js-scroll-trigger" href="{% url 'project' %}">Projects</a>
+                        </li>                        
+                        <li class="nav-item">
+                          <a class="nav-link js-scroll-trigger" href="{% url 'workfor' %}">WorkedFor</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link js-scroll-trigger" href="{% url 'opensource' %}">OpenSource</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+            </nav>
+    
+            <div class="certifi" style="padding-top: 50px; padding-right: 15%; padding-left: 15%;">
+              <table>
+                {% for i in  allblogs %}
+                <tbody>
+                    <tr>
+                      <td class="c-heading">{{ i.date }}</td>
+                    </tr>
+                    <tr>
+                      <td class="c-main">{{ i.name }}</td>
+                      <td class="tdr"><button class="btn-certi" onClick="openTab(this)" name="{{ i.link }}">BlogLink</button></td>
+                    </tr>
+                    <tr>
+                      <td class="c-des" style="border-bottom: 1px solid green;" colspan="2">{{ i.description }}</td>
+                    </tr>
+                </tbody>
+                {% endfor %}
+              </table>
+            </div>
+    
+            <!-- ALL JS FILES -->
+            <script src="{% static 'js/all.js' %}"></script>
+             <script src="{% static 'js/headline.js' %}"></script>
+             <script src="{% static 'js/parallaxie.js' %}"></script>
+             <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+        </body>
+    </html>
