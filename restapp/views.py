@@ -12,7 +12,8 @@ class Simple(APIView):
     def get(self, request):
         with urllib.request.urlopen("https://gauravghati.github.io/apis/buttons.json") as url:
             data = json.loads(url.read().decode())
-        return Response({"buttons": data})
+        print(data)
+        return Response(data)
 
 # WORKING
 class Certificate(APIView):

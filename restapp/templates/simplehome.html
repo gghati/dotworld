@@ -85,12 +85,15 @@
                   </div>
             </nav>
 
-            <div class="certifi" style="text-align: center; padding:300px;">
+            <div class="certifi" style="text-align: center; padding-top:250px; padding-left: 400px; padding-right: 400px;">
               <b style="font-size: 65px;">HI, I'M GAURAV</b> <br>
-              {% for i in buttons %}
-                <button class="btn-certi" onClick="openTab(this)" name="{{ i.link }}">{{ i.name }}</button>
-              {% endfor %}
-              </div>
+                {% for i in formal %}
+                  <button class="btn-certi" onClick="openTab(this)" name="{{ i.link }}">{{ i.name }}</button>
+                {% endfor %} <br><br><br><br>
+                {% for i in informal %}
+                  <button class="btn-certi" onClick="openTab(this)" name="{{ i.link }}">{{ i.name }}</button>
+                {% endfor %}
+            </div>
     
             <!-- ALL JS FILES -->
             <script src="{% static 'js/all.js' %}"></script>
