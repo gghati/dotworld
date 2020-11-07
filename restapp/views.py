@@ -12,7 +12,6 @@ class Simple(APIView):
     def get(self, request):
         with urllib.request.urlopen("https://gauravghati.github.io/apis/buttons.json") as url:
             data = json.loads(url.read().decode())
-        print(data)
         return Response(data)
 
 # WORKING
@@ -65,6 +64,21 @@ class OpenSource(APIView):
             data = json.loads(url.read().decode())
         return Response(data)
 
+
+class RidingSolo(APIView):
+    renderer_classes = [TemplateHTMLRenderer]
+    template_name = 'ridingsolo.html'
+
+    def get(self, request):
+        return Response()
+
+
+class GoodSentences(APIView):
+    renderer_classes = [TemplateHTMLRenderer]
+    template_name = 'goodsentences.html'
+
+    def get(self, request):
+        return Response()
 
 # Review Email Config (NOT WORKING FOR NOW)
 

@@ -1,0 +1,75 @@
+<!-- Heya! Thanks for looking into inspect element of my website! ;) 
+	Wanna know more about website? you can text me anytime! -->
+
+    {% load static %}
+    <!doctype html>
+    <html>
+      <head>
+        <title>Good Sentences</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Mobile Metas -->
+          <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+          
+          <meta name="keywords" content="">
+          <meta name="description" content="">
+          <meta name="author" content="Gaurav Ghati">
+          
+          <!-- Website Icon -->
+          <link rel="shortcut icon" href="{% static 'favicon.png' %}" type="image/x-icon" /> 
+          
+          <!-- Bootstrap CSS -->
+          <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+          
+          <!-- Site CSS -->
+          <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        
+          <script>
+          window.console = window.console || function(t) {};
+          
+          if (document.location.search.match(/type=embed/gi)) {
+          window.parent.postMessage("resize", "*");
+          }
+        </script>
+      </head>	
+    
+      <body>
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #1f1f1f">
+            <div class="container">
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="{% url 'simple' %}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="{% url 'certificate' %}">Certifications</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="{% url 'project' %}">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="{% url 'workfor' %}">WorkedFor</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger" href="{% url 'opensource' %}">OpenSource</a>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+      </nav>
+
+        <div class="certifi" style="padding-top: 50px; padding-right: 15%; padding-left: 15%; text-align: center;">  
+            <H1 style="color:green;padding-top: 100px; padding-bottom: 50px">Good Sentences</H1>
+            <script src="https://gist.github.com/gauravghati/8198c3a1b160519049c41a85a23bae9e.js"></script>  
+        </div>
+    
+    
+        <!-- ALL JS FILES -->
+          <script src="{% static 'js/all.js' %}"></script>
+         <script src="{% static 'js/headline.js' %}"></script>
+         <script src="{% static 'js/parallaxie.js' %}"></script>
+         <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+      </body>
+    </html>
+    
