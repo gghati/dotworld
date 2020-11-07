@@ -72,13 +72,21 @@ class RidingSolo(APIView):
     def get(self, request):
         return Response()
 
-
-class GoodSentences(APIView):
+class GistPages(APIView):
     renderer_classes = [TemplateHTMLRenderer]
     template_name = 'goodsentences.html'
 
-    def get(self, request):
-        return Response()
+    def get(self, request, pagename):
+        print(pagename)
+        with urllib.request.urlopen("https://gauravghati.github.io/apis/gistpages.json") as url:
+            data = json.loads(url.read().decode())
+        
+        page = data[0]
+        for x in data:
+            if (x['pagename']==pagename):
+                page=x
+        
+        return Response(page)
 
 # Review Email Config (NOT WORKING FOR NOW)
 

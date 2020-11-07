@@ -35,8 +35,18 @@
       </head>	
     
       <body>
-		<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #1f1f1f">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #1f1f1f">
             <div class="container">
+              <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <img class="img-fluid"><b style="font-size: 35px;">Gists</b></img>
+              </a>      
+
+            <ul class="navbar-nav text-uppercase ml-auto">
+		          	<li class="nav-item">
+		              <a class="nav-link js-scroll-trigger" target="_blank" href="https://gauravghati.github.io/apis/gistpages.json">Api of this page</a>
+		            </li>
+		        </ul>
+
               <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
                   <li class="nav-item">
@@ -60,10 +70,9 @@
       </nav>
 
         <div class="certifi" style="padding-top: 50px; padding-right: 15%; padding-left: 15%; text-align: center;">  
-            <H1 style="color:green;padding-top: 100px; padding-bottom: 50px">Good Sentences</H1>
-            <script src="https://gist.github.com/gauravghati/8198c3a1b160519049c41a85a23bae9e.js"></script>  
+            <H1 style="color:green;padding-top: 100px; padding-bottom: 50px">{{ name }}</H1>
+            <script src="{{ link }}.js"></script>  
         </div>
-    
     
         <!-- ALL JS FILES -->
           <script src="{% static 'js/all.js' %}"></script>

@@ -9,6 +9,6 @@ urlpatterns = [
     path('projects/', Projects.as_view(), name='project'),
     path('blogs/', Blogs.as_view(), name='blogs'), 
     path('opensource/', OpenSource.as_view(), name='opensource'),
-    path('goodsentences/', GoodSentences.as_view(), name='goodsentences'),
-    path('ridingsolo/', RidingSolo.as_view(), name='ridingsolo')
+    path('ridingsolo/', RidingSolo.as_view(), name='ridingsolo'),
+    path('gist/<slug:pagename>/', GistPages.as_view(), name='gistpages')
 ]
