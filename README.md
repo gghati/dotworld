@@ -1,4 +1,4 @@
-# My Portfolio ([gauravghati.world](http://gauravghati.world))
+# My Portfolio ([Website](http://gauravghati.herokuapp.com/))
 
 ![](https://img.shields.io/badge/Gaurav-Ghati-red)
 ![](https://img.shields.io/github/languages/top/gauravghati/dotworld)
@@ -55,4 +55,4 @@ I used this Json Data to provide my website data, now each time the website load
 
 Now each time when i have to add, delete or edit any data i just have to change the .json files and push it to my github pages repo.
 
-What do you think? let me Know on [gauravghati.world](http://gauravghati.world/)
+What do you think? let me Know on [http://gauravghati.herokuapp.com/](http://gauravghati.herokuapp.com/)
